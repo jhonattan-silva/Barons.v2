@@ -1,0 +1,59 @@
+DOC
+
+Categorias ID:
+Games: 7
+Filmes: 2
+Series: 9
+Livros: 4
+HQS: 8
+
+
+TESTE DE JQUERY
+
+<script LANGUAGE="JavaScript" TYPE="text/javascript">
+if (typeof jQuery != 'undefined') {
+alert ("FOI")
+} else {
+alert ("Esta é uma caixa de diálogo ALERT do JavaScript!")
+} 
+</script>
+        
+        
+NO FUNCTION
+<?php
+function my_custom_scripts() {
+    wp_enqueue_script('jquery-antigo', '//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js');
+    wp_enqueue_script('jquery.carousel.fullscreen', get_template_directory_uri().'/js/jquery.carousel.fullscreen.js', array('jquery-antigo'));
+}
+add_action('wp_enqueue_scripts', 'my_custom_scripts');
+?>
+
+
+NO HEADER
+<!-- Barra de menu -->
+    <nav id="brn-menu" class="navbar navbar-default navbar-fixed-top <?php echo "cat".$category_id ?>">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#meu-navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <!-- Icon-bar são as barrinhas do icone de menu portable -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<?php bloginfo('url');?>">BARONS</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="meu-navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="<?php bloginfo('home'); ?>" class="page-scroll">Home</a></li>
+            <li><a href="<?php echo esc_url($link_games); ?>" class="page-scroll">Games</a></li>
+            <li><a href="<?php echo esc_url($link_filmes); ?>" class="page-scroll">Filmes</a></li>
+            <li><a href="<?php echo esc_url($link_series); ?>" class="page-scroll">Series</a></li>
+            <li><a href="<?php echo esc_url($link_livros); ?>" class="page-scroll">Livros</a></li>
+            <li><a href="<?php echo esc_url($link_hqs); ?>" class="page-scroll">HQs</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>

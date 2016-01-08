@@ -1,0 +1,556 @@
+/*
+Theme Name:     The Baron Theme
+Theme URL:      
+Description:    Tema para o blog.
+Author:         Jhonattan Willian Correia Silva
+Author URI:     
+Template:       
+Version:        1.0
+*/
+
+
+
+@font-face { /* fonte do logo */
+    font-family: 'LeagueGothicRegular';
+    src: url(fonts/league_gothic-webfont.ttf);
+}
+
+
+@font-face { /*font do texto do post */
+    font-family: texto;
+    src: url(fonts/Prociono-Regular.otf);
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.homie{ /* body / paginação*/
+    text-align: center;
+    /*background: no-repeat center fixed;
+    background-size: 100%;*/
+    background-color: #CCCCCC;
+}
+
+.topo{ /* container do cabeçalho (logo e btns) */
+  /*background:radial-gradient(#797C7F,#66645F);
+  border-bottom: 1px groove black;*/
+  background-color: black;
+  height: 19% !important;
+}
+
+
+.logotipo { /* logo do site */
+        background-color: black !important;
+        color: #D2B887;
+        font-family: LeagueGothicRegular;
+        text-align: center;  
+        border: .12em solid #D2B887;
+        font-size: 70px;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-top: 10px;
+
+        -webkit-mask-image: url("http://i.imgur.com/v2Wxzre.png");
+        -o-mask-image: url("http://i.imgur.com/v2Wxzre.png");
+        -moz-mask-image: url("http://i.imgur.com/v2Wxzre.png");
+        -ms-mask-image: url("http://i.imgur.com/v2Wxzre.png");
+        mask-image: url("http://i.imgur.com/v2Wxzre.png");
+
+        webkit-transform: skewY(-3deg);
+        -o-transform:skewY(-3deg);
+        -moz-transform: skewY(-3deg);
+         -ms-transform: skewY(-3deg);
+        transform: skewY(-3deg);
+
+}
+
+
+.botoes{ /* container dos btns*/
+  margin-top: 1%;
+}
+
+
+.btn_inteiro{ /* btn como um todo */
+  display: inline;
+  float: inherit;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100px;/*largura/distancia entre btns*/
+}
+
+
+.btn_fora { /* camada 2 do btn */
+  width: 80px;
+  height: 80px;
+  background: rgba(221,221,221,0.3);
+  display: block;
+  margin-left: 10px;
+  opacity: 0.6; /* 60% de visibilidade */
+
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+
+.btn_dentro {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  display: inline-block;
+  overflow: hidden;
+  
+  border-radius: 85px;
+  -moz-border-radius: 85px;
+  -webkit-border-radius: 85px;
+  -o-border-radius: 85px;
+}
+
+
+.btn_dentro img { /* tamanho da img antes de passar o mouse */
+  margin-top: 8px;
+  margin-left: 7px;
+  width: 55px;
+  height: 55px;
+    
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+
+.btn_dentro span {
+/*  vertical-align: baseline;*/
+  text-align: center;
+  font-weight: bold;
+/*  letter-spacing: 0.08em;
+  text-transform: uppercase;*/
+  float: left;
+  position: absolute;
+  opacity: 0; /*invisivel*/
+  
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+    
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+
+.btn_fora:hover{ /* quando passar o mouse o btn "acende" */
+  opacity: 1; /* totalmente visivel */
+}
+
+.btn_dentro:hover img { /*tamanho da img qdo passa o mouse*/
+  border: none;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.btn_dentro:hover span { /* acender e aparecer a legenda */
+  opacity: 1; /*visivel*/
+  width: 50px;
+  background: transparent;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-top: 50px;
+  margin-left: -24px;
+   
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+
+
+
+
+
+
+/* CAROUSEL */
+.carousel{
+  padding: 0px 0px 0px 0px !important;/* não deixa espaços ocupa 100% horizontal */
+}
+
+.carousel-inner .item { /*padroniza o tamanho do itens para o carrosel ter tamanho fixo */
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.carousel-inner .item img { /* estende a imagem para ocupar o carrosel todo */
+    width: 100%;
+/*    min-height: 100%;
+    max-height: none;*/
+    height: 640px !important;/* padronizar a altura do carrosel*/
+}
+
+
+.titulo a{ /* Configura o caption do carrosel */
+  padding: 0px 5px 0px 5px;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 40px;
+  float: left;
+  text-align: left;
+  background-color: black;
+  color: orange !important;
+}
+
+.subtitulo{ /* Configura o caption do carrosel */
+  padding: 0px 5px 0px 5px;
+  font-size: 20px;
+  float: left;
+  text-align: left;
+  background-color: orange;
+  color: black;
+}
+
+/*
+.carousel-caption {
+      background-color: black;
+      opacity: 0.85;
+      max-width: 550px;
+      padding: 0 20px;
+      margin:0 auto;
+      margin-top: 200px;
+      text-align:center;
+}
+/*
+.carousel-caption h1{
+    opacity: 1 !important;
+    font-weight: bold;
+    color: white;  
+}*/
+
+
+
+/******************************   INDEX   *************************************************/
+
+
+.main{ /* bloco principal (row) com posts e sidebares */
+  padding-top: 8px;
+}
+
+.conteudo{ /* bloco com os posts (md-8) */
+  z-index: 99; /* colocar a frente (probl com mobile) */
+  margin: 0 2% 2% 2%; /*0 para cima e dois para o resto*/
+  /*border: 2px solid #000;*/
+  float: left;
+  background: transparent;
+  border-radius: 6px;
+}
+
+
+.post{ /*formataçao padrão para o interior dos containers de posts*/
+    margin-left: 5.5%;
+    overflow: hidden;
+/*    border: 1px solid #000;*/
+    float: left;
+    height: 35% !important;
+    margin-bottom: 5%;
+    background-color: aliceblue;
+    font-family: texto;
+    border-radius: 4px;
+}
+
+
+
+/* PERSONALIZAÇÕES PARA CATEGORIAS */
+.category-games{/*borda dos cards*/
+    border-top: 7px solid #2B855E;
+}
+.category-games a{
+    color: #2B855E;
+}
+
+.category-filmes {
+    border-top: 7px solid #0081C7;
+}
+.category-filmes a{
+    color: #0081C7;
+}
+
+.category-series {
+    border-top: 7px solid #E27A3F;
+}
+.category-series a{
+  color: #E27A3F;
+}
+
+.category-livros {
+    border-top: 7px solid #A80000;
+}
+.category-livros a{
+  color: #A80000;
+}
+
+.category-hqs {
+    border-top: 7px solid #ADAA10;
+}
+.category-hqs a{
+  color: #ADAA10;
+}
+
+/* FIM PERSONALIZAÇÃO*/
+
+
+.thumbnail{
+  padding-left: 8px !important;
+  margin-left: -20px;
+  position: relative;
+  /*height: 100% !important;
+  width: 40% !important;*/
+  float: left;
+  border:0 !important;
+  background-color: aliceblue !important;
+}
+
+
+/* SUBTITULO DOS POSTS */
+.post-meta-key { /*para que não apareça*/
+  font-size: 0px !important;
+}
+
+
+/*  SIDEBARES   */
+
+.sidebar-completa{
+  margin-top: 1%;
+  width: 25%;   
+  float: right;
+}
+
+#searchsubmit{ /* btn de busca */
+  width: 10%;
+}
+
+.sidebar ul>h3 { /* muda apenas o h3 dentro de uls */
+  color: #FF7321;
+  background-color: #191817;
+  padding: 6px;
+  font-weight: bold; 
+}
+
+
+.sidebar{
+  background:radial-gradient(#66645F,#7D7A75);
+  margin-right: 2%;
+}
+
+.sidebar li>a{
+  color: black;
+}
+
+.sidebar a{
+  color: black;
+  font-size: 17px;
+}
+
+.sidebar a:hover{
+  color: #FF7321;
+  text-decoration: none;
+}
+
+.sidebares{
+  overflow: auto; /* ajusta o thumbnail*/
+  border-bottom: 1px dotted black;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.miniatura img{
+  width: 20% !important;
+  height: 15% !important;
+  float: left;
+}
+
+
+
+
+/* RODAPÉ */
+
+#footer{ /*div footer*/
+    border: 2px solid #000;
+    clear: both;
+}
+
+ul{
+    list-style: none; /* tira o topico da frente da linha */
+}
+
+
+
+#footer {
+  height: 17%;
+  background-color: #222222;
+  border:0 solid #080808;
+  border-top-width: 1px;
+  margin-top:50px;
+  z-index:100;
+  padding: 15px;
+  color:#cccccc;
+}
+
+#footer a{
+  color:#cccccc;
+}
+
+#footer a:hover {
+  color:#ffffff;
+  margin-left:-2px;
+  text-decoration:none;
+}
+
+
+
+.Games{
+    background: #2B855E;
+}
+
+.Filmes{
+    background: #0081C7;
+}
+
+
+.Series{
+    background: #E27A3F;
+}
+
+
+.livros{
+    background: #A80000;
+}
+
+.Hqs{
+    background: #ADAA10;
+}
+
+
+/* CATEGORIAS */
+.categoria{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.categoria>h1{
+  text-decoration: blink;
+  background-color: black !important;
+  color: #D2B887;
+  font-family: LeagueGothicRegular;
+  text-align: center;  
+  font-size: 70px;
+  line-height: 1;
+  font-weight: bold;
+  margin-top: 0px; 
+}
+
+
+/* PAGINAÇÃO */
+
+.page-numbers {
+  color: black;
+  text-decoration: none;
+  padding: 9px 12px;
+  border-radius: 16px;
+  background: #fff;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-weight: bold;
+}
+
+.page-numbers.current, a.page-numbers:hover {
+  background: #5ea25a;
+}
+
+.whats{
+  display: none;
+}
+
+.wp-caption-text{
+  font-size: 12px;
+  background-color: #66645F;
+  border-left: 1px dotted black;
+  border-right: 1px dotted black;
+  border-bottom: 1px dotted black;
+}
+
+
+
+/* PAGINA TAG*/
+.tagueado{
+  text-decoration: blink;
+  background-color: black !important;
+  color: #D2B887;
+  font-family: LeagueGothicRegular;
+  text-align: center;  
+  font-size: 70px;
+  font-weight: bold; 
+  border-bottom: .12em solid #D2B887 !important;
+  margin-top: -10px !important;
+}
+
+
+/* PAGINA 404 */
+.errada{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-image: url('http://i.imgur.com/bpQStHB.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width: 768px){
+
+  .topo{
+    height: 40% !important;
+  }
+
+  .btn_inteiro {
+    float: left;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  display: inline-block;
+  }
+
+  .btn_dentro{
+  background-color: transparent;
+  }
+
+  .btn_fora {
+    background-color: transparent;
+  }
+
+  .btn_dentro>span {
+    display: none;
+  }
+
+  .whats{
+    display: inline-block;
+  }
+}
