@@ -1,10 +1,10 @@
-<div class="sidebar_completa">
-    <div class="col-md-3 sidebar">
+<div class="sidebar-completa">
+    <div class="sidebar">
         <?php get_search_form(); ?>
     </div>
 
 
-    <div class="col-md-3 sidebar"> 
+    <div class="sidebar"> 
         <?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>
             <ul>
                 <h3>TAGS POPULARES</h3>
@@ -13,7 +13,7 @@
         <?php endif; ?>
     </div>
 
-    <div class="col-md-3 sidebar">
+    <div class="sidebar">
         <ul>
             <h3>DESCUBRA O QUE NÃO PROCURAVA</h3>
             <?php $posts = get_posts('orderby=rand&numberposts=5'); foreach($posts as $post) { ?>

@@ -7,7 +7,7 @@ Author URI:
 Template:       
 Version:        1.0
 */
-
+/* Background pattern from subtlepatterns.com */
 
 
 @font-face { /* fonte do logo */
@@ -27,6 +27,9 @@ img{
   height: auto;
 }
 
+body{
+  background: url('http://i.imgur.com/9mYzsI0.png');
+}
 
 .homie{ /* body / paginação*/
     text-align: center;
@@ -191,6 +194,7 @@ img{
 /* CAROUSEL */
 .carousel{
   padding: 0px 0px 0px 0px !important;/* não deixa espaços ocupa 100% horizontal */
+  margin-bottom: 2%;
 }
 
 .carousel-inner .item { /*padroniza o tamanho do itens para o carrosel ter tamanho fixo */
@@ -255,7 +259,7 @@ img{
 
 .conteudo{ /* bloco com os posts (md-8) */
   z-index: 99; /* colocar a frente (probl com mobile) */
-  margin: 0 2% 2% 2%; /*0 para cima e dois para o resto*/
+  margin: 0 2% 0% 2%; /*0 para cima e baixo e 2 para o resto*/
   /*border: 2px solid #000;*/
   float: left;
   background: transparent;
@@ -273,9 +277,13 @@ img{
     background-color: aliceblue;
     font-family: texto;
     border-radius: 4px;
+
+  background: url('http://i.imgur.com/M08mvsG.png');
 }
 
-
+.paginacao{
+  margin-bottom: 2%;
+}
 
 /* PERSONALIZAÇÕES PARA CATEGORIAS */
 .category-games{/*borda dos cards*/
@@ -321,7 +329,7 @@ img{
   margin-left: -20px;
   position: relative;
   /*height: 100% !important;
-  width: 40% !important;*/
+  width: 25% !important;*/
   float: left;
   border:0 !important;
   background-color: aliceblue !important;
@@ -338,12 +346,24 @@ img{
 
 .sidebar-completa{
   margin-top: 1%;
+  margin-right: 2%;
   width: 25%;   
   float: right;
+  text-align: center; /* todo texto dentro de sidebar fica centralizado */
 }
 
 #searchsubmit{ /* btn de busca */
   width: 10%;
+  color: black;
+}
+
+
+.sidebar{
+  border-radius: 8px;
+  background:radial-gradient(#66645F,#7D7A75);
+  margin-right: 2%;
+
+  background: url('http://i.imgur.com/CEv8VBf.png');
 }
 
 .sidebar ul>h3 { /* muda apenas o h3 dentro de uls */
@@ -353,19 +373,16 @@ img{
   font-weight: bold; 
 }
 
-
-.sidebar{
-  background:radial-gradient(#66645F,#7D7A75);
-  margin-right: 2%;
+ul{ /* ajusta os sidebares */
+  padding: 0;
+  webkit-padding: 0;
+  moz-padding: 0;
 }
 
-.sidebar li>a{
-  color: black;
-}
-
-.sidebar a{
+.sidebar a{ /* links em geral */
   color: black;
   font-size: 17px;
+  font-weight: bold;
 }
 
 .sidebar a:hover{
@@ -373,17 +390,24 @@ img{
   text-decoration: none;
 }
 
-.sidebares{
+.sidebares{ /* classe das linhas do sidebar */
   overflow: auto; /* ajusta o thumbnail*/
-  border-bottom: 1px dotted black;
   margin-bottom: 5px;
   padding-bottom: 5px;
+  padding-right: 1%;
+  border-bottom: 1px dotted black;
 }
 
-.miniatura img{
-  width: 20% !important;
+.sidebares:nth-last-child(1) { /* função no sidebares para pegar a linha indicada (não aparecer o separador na ultima linha) */
+  border-bottom: 0px solid black;
+} 
+
+.miniatura img{ /* div do thumbnail - sidebar */
+  width: 25% !important;
   height: 15% !important;
   float: left;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 
@@ -468,6 +492,10 @@ ul{
 
 
 /* PAGINAÇÃO */
+.screen-reader-text{/* classe automatica do texto da paginação*/
+  padding-bottom: 5%;
+  color: #EAFBFF;
+}
 
 .page-numbers {
   color: black;
@@ -500,7 +528,7 @@ ul{
 
 
 /* PAGINA TAG*/
-.tagueado{
+.tagueado{ /* h1 grudado no header*/
   text-decoration: blink;
   background-color: black !important;
   color: #D2B887;
@@ -510,20 +538,31 @@ ul{
   font-weight: bold; 
   border-bottom: .12em solid #D2B887 !important;
   margin-top: -10px !important;
+  margin-bottom: 3%;
 }
 
 
 /* PAGINA 404 */
-.errada{
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-image: url('http://i.imgur.com/bpQStHB.png');
-  background-size: 50%;
-  background-repeat: no-repeat;
+.errada>img{
+  width: 50%;
+  margin-left: 10%;
+  margin-right: 50%;
+}
+
+.errada>span{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+ }
+
+
+/* PAGINA DE BUSCA */
+.page-title{
+  color: white;
 }
 
 
+/*
 @media only screen and (max-width: 768px){
 
   .topo{
@@ -554,3 +593,4 @@ ul{
     display: inline-block;
   }
 }
+*/
