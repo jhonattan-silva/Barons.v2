@@ -1,4 +1,4 @@
-<?php get_header('single'); ?>
+<?php get_header(); ?>
 	
 	<div class="container-fluid">
 		<div class="row categoria">

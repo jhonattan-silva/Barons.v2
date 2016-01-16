@@ -9,6 +9,9 @@ Version:        1.0
 */
 /* Background pattern from subtlepatterns.com */
 
+@import url(https://fonts.googleapis.com/css?family=Kadwa); /* fonte do conteudo dos posts*/
+
+
 
 @font-face { /* fonte do logo */
     font-family: 'LeagueGothicRegular';
@@ -16,10 +19,6 @@ Version:        1.0
 }
 
 
-@font-face { /*font do texto do post */
-    font-family: texto;
-    src: url(fonts/Prociono-Regular.otf);
-}
 
 img{
   display: block;
@@ -29,8 +28,29 @@ img{
 
 body{
   background: url('http://i.imgur.com/9mYzsI0.png');
+  /*-webkit-margin-before: -30px !important;
+  margin-top: 0px !important;*/
 }
 
+a{ /* cor dos links */
+  color: #FCAC45;
+}
+
+a:hover, a:focus{ /* cor dos links e sem sublinhado quando passar o mouse */
+  text-decoration: none !important;
+  color: #FCAC45;
+}
+
+/* Itens que não apareceram a não ser no mobile */
+.navbar{
+  display: none !important;
+}
+
+
+
+
+
+/* FIM DA RESTRIÇÃO */
 .homie{ /* body / paginação*/
     text-align: center;
     /*background: no-repeat center fixed;
@@ -47,28 +67,27 @@ body{
 
 
 .logotipo { /* logo do site */
-        background-color: black !important;
-        color: #D2B887;
-        font-family: LeagueGothicRegular;
-        text-align: center;  
-        border: .12em solid #D2B887;
-        font-size: 70px;
-        line-height: 1;
-        text-transform: uppercase;
-        margin-top: 10px;
+  background-color: black !important;
+  color: #D2B887;
+  font-family: LeagueGothicRegular;
+  text-align: center;  
+  border: .12em solid #D2B887;
+  font-size: 70px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 10px;
 
-        -webkit-mask-image: url("http://i.imgur.com/v2Wxzre.png");
-        -o-mask-image: url("http://i.imgur.com/v2Wxzre.png");
-        -moz-mask-image: url("http://i.imgur.com/v2Wxzre.png");
-        -ms-mask-image: url("http://i.imgur.com/v2Wxzre.png");
-        mask-image: url("http://i.imgur.com/v2Wxzre.png");
+  -webkit-mask-image: url("http://i.imgur.com/v2Wxzre.png");
+  -o-mask-image: url("http://i.imgur.com/v2Wxzre.png");
+  -moz-mask-image: url("http://i.imgur.com/v2Wxzre.png");
+  -ms-mask-image: url("http://i.imgur.com/v2Wxzre.png");
+  mask-image: url("http://i.imgur.com/v2Wxzre.png");
 
-        webkit-transform: skewY(-3deg);
-        -o-transform:skewY(-3deg);
-        -moz-transform: skewY(-3deg);
-         -ms-transform: skewY(-3deg);
-        transform: skewY(-3deg);
-
+  webkit-transform: skewY(-3deg);
+  -o-transform:skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+  transform: skewY(-3deg);
 }
 
 
@@ -82,14 +101,14 @@ body{
   float: inherit;
   margin-left: 10px;
   margin-right: 10px;
-  width: 100px;/*largura/distancia entre btns*/
+  width: 15%;/*largura/distancia entre btns*/
 }
 
 
 .btn_fora { /* camada 2 do btn */
   width: 80px;
   height: 80px;
-  background: rgba(221,221,221,0.3);
+  background: black;
   display: block;
   margin-left: 10px;
   opacity: 0.6; /* 60% de visibilidade */
@@ -107,6 +126,7 @@ body{
   margin: 5px;
   display: inline-block;
   overflow: hidden;
+  background-color: transparent !important;
   
   border-radius: 85px;
   -moz-border-radius: 85px;
@@ -116,10 +136,10 @@ body{
 
 
 .btn_dentro img { /* tamanho da img antes de passar o mouse */
-  margin-top: 8px;
-  margin-left: 7px;
-  width: 55px;
-  height: 55px;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 70px;
+  height: 70px;
     
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -267,6 +287,7 @@ body{
 }
 
 
+
 .post{ /*formataçao padrão para o interior dos containers de posts*/
     margin-left: 5.5%;
     overflow: hidden;
@@ -275,15 +296,12 @@ body{
     height: 35% !important;
     margin-bottom: 5%;
     background-color: aliceblue;
-    font-family: texto;
+    font-family: 'Kadwa', serif;
     border-radius: 4px;
 
   background: url('http://i.imgur.com/M08mvsG.png');
 }
 
-.paginacao{
-  margin-bottom: 2%;
-}
 
 /* PERSONALIZAÇÕES PARA CATEGORIAS */
 .category-games{/*borda dos cards*/
@@ -321,6 +339,61 @@ body{
   color: #ADAA10;
 }
 
+
+
+/* games */
+div.cat7{
+  background-color: #2B855E!important;
+}
+
+h1.cat7{
+  color: #2B855E!important;
+  border-bottom: .12em solid #2B855E !important;
+  letter-spacing: .1em;
+}
+
+/* filmes */
+div.cat2{
+  background-color: #0081C7!important;
+}
+h1.cat2{
+  color: #0081C7!important;
+  border-bottom: .12em solid #0081C7 !important;
+  letter-spacing: .1em;
+}
+
+/* series */
+div.cat9{
+  /*background-color: #E27A3F!important;*/
+  background:radial-gradient(#E27A3F,#EA7A3F)!important;
+}
+h1.cat9{
+  color: #E27A3F!important;
+  border-bottom: .12em solid #E27A3F !important;
+  letter-spacing: .1em;
+}
+
+/* livros */
+div.cat4{
+  /*background-color: #A80000!important;*/
+  background:radial-gradient(#A80000, #B30000)!important;
+}
+h1.cat4{
+  color: #A80000 !important;
+  border-bottom: .12em solid #A80000 !important;
+  letter-spacing: .1em;
+}
+
+/* HQs */
+div.cat8{
+  /*background-color: #A55231!important;
+  background:radial-gradient(#A55231,#A54231) !important;*/
+  background:radial-gradient(#ADAA10,#A3A00F) !important;
+}
+h1.cat8{
+  color: #ADAA10 !important;
+  border-bottom: .12em solid #ADAA10 !important;
+}
 /* FIM PERSONALIZAÇÃO*/
 
 
@@ -339,6 +412,27 @@ body{
 /* SUBTITULO DOS POSTS */
 .post-meta-key { /*para que não apareça*/
   font-size: 0px !important;
+}
+
+
+
+
+/* CONTEUDO DOS POSTS*/
+
+.content{ /* Onde fica o painel com a imagem, o titulo e subtitulo*/
+  position: relative;
+  padding-top: 27%; /* tamanho da imagem */
+}
+
+.texto{
+  font-family: 'Kadwa', serif;
+  font-size: 16px;
+  color: #B2BFC2;
+  text-align: justify;
+}
+
+.size-large, .wp-caption-text{ /* tamanho da imagem grande e o caption dela*/
+  width: 70% !important;
 }
 
 
@@ -413,40 +507,6 @@ ul{ /* ajusta os sidebares */
 
 
 
-/* RODAPÉ */
-
-#footer{ /*div footer*/
-    border: 2px solid #000;
-    clear: both;
-}
-
-ul{
-    list-style: none; /* tira o topico da frente da linha */
-}
-
-
-
-#footer {
-  height: 17%;
-  background-color: #222222;
-  border:0 solid #080808;
-  border-top-width: 1px;
-  margin-top:50px;
-  z-index:100;
-  padding: 15px;
-  color:#cccccc;
-}
-
-#footer a{
-  color:#cccccc;
-}
-
-#footer a:hover {
-  color:#ffffff;
-  margin-left:-2px;
-  text-decoration:none;
-}
-
 
 
 .Games{
@@ -492,6 +552,11 @@ ul{
 
 
 /* PAGINAÇÃO */
+.paginacao{
+  margin-bottom: 2%;
+}
+
+
 .screen-reader-text{/* classe automatica do texto da paginação*/
   padding-bottom: 5%;
   color: #EAFBFF;
@@ -512,6 +577,8 @@ ul{
 .page-numbers.current, a.page-numbers:hover {
   background: #5ea25a;
 }
+
+/* FIM PAGINAÇÃO */
 
 .whats{
   display: none;
@@ -544,9 +611,10 @@ ul{
 
 /* PAGINA 404 */
 .errada>img{
-  width: 50%;
-  margin-left: 10%;
-  margin-right: 50%;
+  width: 80%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .errada>span{
@@ -561,6 +629,109 @@ ul{
   color: white;
 }
 
+
+/* RODAPÉ */
+
+footer {
+  height: 17%;
+  background-color: #222222;
+  border:0 solid #080808;
+  border-top-width: 1px;
+  margin-top:50px;
+  z-index:100;
+  padding: 15px;
+  color:#cccccc;
+  clear: both;
+  list-style: none; /* tira o topico da frente da linha */
+}
+
+footer p{
+  font-family: 'Kadwa';
+  font-size: 16px;
+}
+
+footer a{
+  color:#cccccc;
+}
+
+footer a:hover {
+  color:#ffffff;
+  margin-left:-2px;
+  text-decoration:none;
+}
+
+/* FIM RODAPÉ */
+
+
+
+@media only screen and (max-width: 768px){
+  .sidebar-completa{
+    float: inherit;
+    width: 100%;
+    margin-top: 13%;
+  }
+
+  .logotipo{
+    margin-left: 3%;
+    width: 60%;
+    height: 20%;
+  }
+
+  button{
+    width: 20%;
+    margin-top: 10% !important;
+    border-radius: 20px !important;
+  }
+
+  button>span{
+    padding-left: 45px !important;
+  }
+
+  .navbar{
+    display: inline !important;
+  }
+
+  nav::before{
+    margin-top: -20px !important;
+  }
+  nav::after{
+    margin-bottom: -20px !important;
+  }
+
+  .navbar-nav{
+    background-color: black !important;
+    color: white;
+    font-weight: bold;
+  }
+
+  .navbar-header{
+    background-color: black;
+  }
+
+  .topo{
+    display: none !important;
+  }
+
+  .carousel, .carosel-inner, .item{
+    height: 400px;
+  }
+
+  .item img { 
+    max-height: 100% !important;
+  }
+
+  .titulo>a{
+    font-size: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .subtitulo{
+    font-size: 12px;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+}
 
 /*
 @media only screen and (max-width: 768px){

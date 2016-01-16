@@ -37,9 +37,10 @@ function add_googleanalytics() { ?>
 
 
 <?php
-//reduzindo para 20 palavras o resumo
+//utilizar echo substr(get_the_excerpt(), 0,50); no lugar do excerpt ou a função abaixo conta palavras ao invez de letras 
+//reduzindo para 12 palavras o resumo
 function new_excerpt_length($length) {
-    return 20; 
+    return 12; 
 }
 	add_filter('excerpt_length', 'new_excerpt_length');
 ?>

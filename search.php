@@ -1,6 +1,6 @@
 <?php get_header(); ?>
  
-<div class="row main" ><!--class bootstrap--><!--id="main"--> 
+<div class="row-fluid main" ><!--class bootstrap--><!--id="main"--> 
     <div class="col-md-8 conteudo"> <!--class bootstrap--><!--id="conteudo"-->
 		<h1 class="page-title"><span> Resultados para: <?php the_search_query(); ?></span></h1>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?> <!-- comandos do wp, para verificar se tem posts para mostrar--> 

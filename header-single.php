@@ -1,4 +1,5 @@
-<html> <!--Fecha no footer-->
+<!DOCTYPE html>
+<html lang="pt-BR"> <!--Fecha no footer-->
     <head>
         <meta name="viewimport" content="width=device-width, initial-scale=1, maximun-scale=1, user-scalable=no"><!--função para ajustes mobile-->
         <title>BARONS - Amantes de tudo, especialistas em nada</title>
@@ -8,6 +9,12 @@
         <!-- links bootstrap online --!
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <link rel="icon" href="<?php bloginfo( 'template_url' ); ?>/imgs/favicon-16.png" sizes="16x16">
+        <link rel="icon" href="<?php bloginfo( 'template_url' ); ?>/imgs/favicon32-.png" sizes="32x32">
+        <link rel="icon" href="<?php bloginfo( 'template_url' ); ?>/imgs/favicon48-.png" sizes="48x48">
+        <link rel="icon" href="<?php bloginfo( 'template_url' ); ?>/imgs/favicon-64.png" sizes="64x64">
+        <link rel="icon" href="<?php bloginfo( 'template_url' ); ?>/imgs/favicon-128.png" sizes="128x128">
 
 
         <?php wp_enqueue_style('single-style', get_bloginfo('template_directory') . '/css/single-style.css'); ?>
@@ -19,21 +26,6 @@
 
 <body>
 
-<!-- BOTÕES SOCIAIS -->
-    <div id="fb-root"></div>
-    <script>
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
-
-    <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
 
 
 <!-- CATEGORIAS -->
@@ -59,11 +51,11 @@ $link_hqs = get_category_link( $id_hqs );
 ?>
 
 
-<!-- COMEÇA O MENU -->
+<<!-- COMEÇA O MENU -->
 <div class="container-fluid topo"><!--class pertece ao bootstrap --><!--id="header"-->
 
-  <div class="col-md-3 col-md-offset-0"><a href="<?php bloginfo('url');?>"><h1 class="logotipo">BARONS</h1></a></div>                 
-  <div class="col-md-6 col-md-offset-3 botoes">
+  <div class="col-md-3 col-xs-6 col-sm-4 col-md-offset-0 col-sm-offset-0"><a href="<?php bloginfo('url');?>"><h1 class="logotipo">BARONS</h1></a></div>                 
+  <div class="col-md-6 col-xs-12 col-sm-7 col-md-offset-3 col-sm-offset-1 botoes">
     <div class="btn_inteiro">
       <div class="btn_fora">
         <a href="<?php echo esc_url($link_games); ?>">
@@ -115,3 +107,41 @@ $link_hqs = get_category_link( $id_hqs );
       </div>    
   </div>
 </div><!-- FIM DO MENU -->
+    
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="<?php bloginfo('url');?>"><h1 class="logotipo">BARONS</h1></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="<?php echo esc_url($link_games); ?>"> GAMES </a></li>
+        <li><a href="<?php echo esc_url($link_filmes); ?>">FILMES</a></li>
+        <li><a href="<?php echo esc_url($link_series); ?>">SERIES</a></li>
+        <li><a href="<?php echo esc_url($link_livros); ?>">LIVROS</a></li>
+        <li><a href="<?php echo esc_url($link_hqs); ?>">HQs</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+        
+
+        
+        

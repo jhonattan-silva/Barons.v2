@@ -7,7 +7,7 @@
             <div class="item active">
                 <img src="<?php echo img_principal("7") ?>" alt="" />
                     <div class="carousel-caption">
-                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span><br><br><br>
+                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span>
                         <span class="subtitulo"><?php echo get_post_meta($post->ID, 'subtitulo', true); ?></span> 
                     </div>
             </div>
@@ -15,7 +15,7 @@
            <div class="item">
                 <img src="<?php echo img_principal("2") ?>" alt="" />
                     <div class="carousel-caption">
-                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span><br><br><br>
+                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span>
                         <span class="subtitulo"><?php echo get_post_meta($post->ID, 'subtitulo', true); ?></span>
                     </div>
             </div>
@@ -23,7 +23,7 @@
             <div class="item">
                 <img src="<?php echo img_principal("9") ?>" alt="" />
                     <div class="carousel-caption">
-                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span><br><br><br>
+                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span>
                         <span class="subtitulo"><?php echo get_post_meta($post->ID, 'subtitulo', true); ?></span>
                     </div>
             </div>
@@ -31,7 +31,7 @@
             <div class="item">
                 <img src="<?php echo img_principal("4") ?>" alt="" /> 
                     <div class="carousel-caption">
-                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span><br><br><br>
+                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span>
                         <span class="subtitulo"><?php echo get_post_meta($post->ID, 'subtitulo', true); ?></span>
                     </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="item">
                 <img src="<?php echo img_principal("8") ?>" alt="" />
                     <div class="carousel-caption">
-                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span><br><br><br>
+                        <span class="titulo"><a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></span>
                         <span class="subtitulo"><?php echo get_post_meta($post->ID, 'subtitulo', true); ?></span>
                     </div>
             </div>

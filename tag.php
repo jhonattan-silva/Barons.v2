@@ -3,7 +3,7 @@
 
 
            
-<div class="row main" ><!--class bootstrap--><!--id="main"--> 
+<div class="row-fluid main" ><!--class bootstrap--><!--id="main"--> 
 <h1 class="tagueado"><?php single_tag_title(); ?></h1>
     <div class="col-md-8 conteudo"> <!--class bootstrap--><!--id="conteudo"-->
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?> <!-- comandos do wp, para verificar se tem posts para mostrar--> 

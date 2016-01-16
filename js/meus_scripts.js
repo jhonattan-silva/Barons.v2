@@ -61,11 +61,6 @@ $('.overlay div.content img').each(function() {
             '-o-background-size': '100%',
             'background-size': '100%',
             'z-index': '-99', /*manter img atras de tudo */
-            /* cover para manter a img mais esticada possivel*/
-            '-webkit-background-size': 'cover',
-            '-moz-background-size': 'cover',
-            '-o-background-size': 'cover',
-            'background-size': 'cover'
         });
         $(".content>img, .capa").remove(); //apaga a img original para deixar somente a resized
     });
